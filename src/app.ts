@@ -8,6 +8,7 @@ import express, { Application, Request, Response } from 'express';
 import globalErrorHandler from './app/middlewares/globalErrorhandler';
 import notFound from './app/middlewares/notFound';
 import router from './app/routes';
+import config from './app/config';
 
 const app: Application = express();
 
@@ -17,10 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173',
-      'https://university-management-frontend-chi.vercel.app',
-    ],
+    origin: config.origin,
     credentials: true,
   }),
 );

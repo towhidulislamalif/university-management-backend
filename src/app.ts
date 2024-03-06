@@ -19,7 +19,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:5173',
-      'https://university-management-frontend-chi.vercel.app/',
+      'https://university-management-frontend-chi.vercel.app',
     ],
     credentials: true,
   }),

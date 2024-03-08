@@ -6,7 +6,6 @@ dotenv.config({ path: path.join((process.cwd(), '.env')) });
 export default {
   NODE_ENV: process.env.NODE_ENV,
   port: process.env.PORT,
-  origin: process.env.ORIGIN,
   database_url: process.env.MONGODB_URL,
   bcrypt_salt_rounds: process.env.BCRYPT_SALT,
   default_password: process.env.DEFAULT_PASSWORD,

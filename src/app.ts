@@ -19,6 +19,7 @@ app.use(
   cors({
     origin: 'https://university-management-frontend-alpha.vercel.app',
     credentials: true,
+    allowedHeaders: 'https://university-management-frontend-alpha.vercel.app',
   }),
 );
 

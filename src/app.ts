@@ -17,9 +17,12 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: 'https://university-management-frontend-alpha.vercel.app',
+    origin: [
+      'http://localhost:5173',
+      'https://university-management-frontend-mu.vercel.app',
+    ],
     credentials: true,
-    allowedHeaders: 'https://university-management-frontend-alpha.vercel.app',
+    allowedHeaders: 'https://university-management-frontend-mu.vercel.app',
   }),
 );
 

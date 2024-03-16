@@ -17,12 +17,9 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173',
-      'https://university-management-frontend-mu.vercel.app',
-    ],
+    origin: 'https://university-management-frontend-mu.vercel.app',
     credentials: true,
-    allowedHeaders: 'https://university-management-frontend-mu.vercel.app',
+    // allowedHeaders: 'https://university-management-frontend-mu.vercel.app',
   }),
 );
 
@@ -30,7 +27,7 @@ app.use(
 app.use('/api/v1', router);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hi Next Level Developer !');
+  res.send('Welcome to the University Management Server');
 });
 
 app.use(globalErrorHandler);

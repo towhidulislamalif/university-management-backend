@@ -42,10 +42,14 @@ const updateAdminIntoDB = async (id: string, payload: Partial<TAdmin>) => {
     }
   }
 
-  const result = await Admin.findByIdAndUpdate({ id }, modifiedUpdatedData, {
-    new: true,
-    runValidators: true,
-  });
+  const result = await Admin.findOneAndUpdate(
+    { _id: id },
+    modifiedUpdatedData,
+    {
+      new: true,
+      runValidators: true,
+    },
+  );
   return result;
 };
 
